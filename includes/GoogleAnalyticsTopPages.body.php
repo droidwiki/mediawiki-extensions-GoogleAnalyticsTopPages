@@ -83,7 +83,7 @@
 				return $title;
 			}
 
-			// try parse_url and parse_str (maybe it's a index.php?title=Page construct)
+			// try parse_url and parse_str (maybe it's an index.php?title=Page construct)
 			$url = parse_url( $text );
 			if ( isset( $url['query'] ) ) {
 				parse_str( $url['query'], $query );
@@ -96,5 +96,64 @@
 			}
 
 			return false;
+		}
+
+		/**
+		 * Render the content which should be added with the gatp-parser tag
+		 *
+		 * @param string $input Inout between the tags
+		 * @param array $args Tag arguments
+		 * @param Parser $parser The parser object which is parsing the page with the tag
+		 * @param PPFrame $frame The parent frame object
+		 *
+		 * @return string
+		 */
+		public static function renderParserTag( $input, array $args, Parser $parser, PPFrame $frame ) {
+			$dbw = wfGetDB( DB_SLAVE );
+			$result = '';
+
+			// get the actual list of top pages
+			$res = $dbw->select(
+				'page_google_stats',
+				array(
+					'page_title',
+					'page_visitors'
+				),
+				'',
+				__METHOD__,
+				array(
+					// FIXME: Should be configurable
+					'LIMIT' => '10',
+					'ORDER BY' => 'page_visitors DESC'
+				)
+			);
+
+			// if there was an error or no rows, return empty string
+			if ( !$res ) {
+				return '';
+			}
+
+			// build the list of top pages
+			$result .= Html::openElement( 'ol', array( 'class' => 'special' ) );
+			foreach( $res as $value ) {
+				$title = Title::newFromText( $value->page_title );
+				if ( $title->exists() ) {
+					$result .= self::makeListItem( $title );
+				}
+			}
+			$result .= Html::closeElement( 'ol' );
+
+			return $result;
+		}
+
+		/**
+		 * Creates a list item (<li>) with a link. Label and location comes from the title object.
+		 *
+		 * @param Title $title Title object to get information from
+		 * @return string Formatted HTML
+		 */
+		private static function makeListItem( Title $title ) {
+			return Html::rawElement( 'li', array(),
+				Linker::linkKnown( $title, $title->getText() ) );
 		}
 	}

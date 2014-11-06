@@ -58,6 +58,7 @@
 	// Hooks
 	$wgHooks['LoadExtensionSchemaUpdates'][] =
 		'GoogleAnalyticsTopPagesHooks::onLoadExtensionSchemaUpdates';
+	$wgHooks['ParserFirstCallInit'][] = 'GoogleAnalyticsTopPagesHooks::onParserFirstCallInit';
 
 	// Configuration variables
 
