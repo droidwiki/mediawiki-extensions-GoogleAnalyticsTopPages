@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ата"
+		]
+	},
+	"googleanalyticstoppages-desc": "Надає список найпопулярніших сторінок згідно з даними Google Analytics",
+	"apihelp-googlepagestatsupdate-param-key": "Значення [[mw:Manual:$wgSecretKey|$wgSecretKey]]"
+}

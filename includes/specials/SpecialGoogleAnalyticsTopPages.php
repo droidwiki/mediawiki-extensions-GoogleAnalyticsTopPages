@@ -7,4 +7,8 @@
 		public function execute( $par ) {
 
 		}
+
+		protected function getGroupName() {
+			return 'other';
+		}
 	}

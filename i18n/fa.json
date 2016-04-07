@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Reza1615"
+		]
+	},
+	"googleanalyticstoppages-desc": "تهیهٔ فهرست صفحات با استفاده از اطلاعات گوگل آنالیتیکز",
+	"apihelp-googlepagestatsupdate-param-key": "مقدار [[mw:Manual:$wgSecretKey|$wgSecretKey]]"
+}

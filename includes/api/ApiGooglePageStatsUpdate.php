@@ -25,7 +25,7 @@
 
 				if ( $del ) {
 					// get the actual data from Google Analytics
-					$data = GoogleAnalyticsTopPages::getData();
+					$data = GoogleAnalyticsTopPages::getData( $this->getRequest() );
 
 					// insert the new data
 					$res = $dbw->insert(

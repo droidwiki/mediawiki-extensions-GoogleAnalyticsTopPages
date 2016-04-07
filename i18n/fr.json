@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abaddon1337"
+		]
+	},
+	"googleanalyticstoppages-desc": "Fournit une liste des pages récentes avec l'utilisation des données Google Analytics",
+	"apihelp-googlepagestatsupdate-param-key": "Valeur de [[mw:Manual:$wgSecretKey|$wgSecretKey]]"
+}

@@ -1,0 +1,8 @@
+{
+	"name": "mediawiki/googleanalyticstoppages",
+	"description": "Provides a list of top pages from Google Analytics.",
+	"license": "MIT",
+	"require": {
+		"google/apiclient": "^2.0.0@RC"
+	}
+}

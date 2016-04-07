@@ -1,6 +1,6 @@
 <?php
 	class GoogleAnalyticsTopPages {
-		public static function getData() {
+		public static function getData( WebRequest $request ) {
 			global $wgGATPServiceAccountName, $wgGATPKeyFileLocation, $wgGATPAppName,
 				$wgGATPProfileId, $wgGATPInterval;
 
@@ -12,8 +12,8 @@
 			$service = new Google_Service_Analytics( $client );
 
 			// check, if the client is already authenticated
-			if ( isset( $_SESSION['service_token'] ) ) {
-				$client->setAccessToken( $_SESSION['service_token'] );
+			if ( $request->getSessionData( 'service_token' ) !== null ) {
+				$client->setAccessToken( $request->getSessionData( 'service_token' ) );
 			}
 
 			// load the certificate key file
@@ -31,7 +31,7 @@
 				$client->getAuth()->refreshTokenWithAssertion( $cred );
 			}
 			// set the service_token to the session for future requests
-			$_SESSION['service_token'] = $client->getAccessToken();
+			$request->setSessionData( 'service_token', $client->getAccessToken() );
 
 			// get the start and end time for the request
 			$startTime = date( 'Y-m-d', time() - $wgGATPInterval * 86400 );

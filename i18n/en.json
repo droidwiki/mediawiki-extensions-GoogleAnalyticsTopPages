@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Florian Schmidt"
+		]
+	},
+	"googleanalyticstoppages-desc": "Provides a top pages list with the use of Google Analytics data",
+	"apihelp-googlepagestatsupdate-param-key": "Value of [[mw:Manual:$wgSecretKey|$wgSecretKey]]",
+	"apihelp-googlepagestatsupdate-description": "Updates the list of top pages (powered by data provided by Google Analytics)."
+}

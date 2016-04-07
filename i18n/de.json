@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64",
+			"Purodha"
+		]
+	},
+	"googleanalyticstoppages-desc": "Kann unter Verwendung von Google-Analytics-Daten eine Top-Seiten-Liste anzeigen.",
+	"apihelp-googlepagestatsupdate-param-key": "Der Wert des geheimen Schlüssels <code lang=\"en\" xml:lang=\"en\">[[mw:Manual:$wgSecretKey|$wgSecretKey]]</code>"
+}

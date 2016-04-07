@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"googleanalyticstoppages-desc": "Дава список на најкотирани страници со употреба на податоци од Google Аналитика",
+	"apihelp-googlepagestatsupdate-param-key": "Вредност на [[mw:Manual:$wgSecretKey|$wgSecretKey]]"
+}

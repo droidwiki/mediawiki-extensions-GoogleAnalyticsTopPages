@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe"
+		]
+	},
+	"apihelp-googlepagestatsupdate-param-key": "Valor de [[mw:Manual:$wgSecretKey|$wgSecretKey]]"
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"googleanalyticstoppages-desc": "Ufre una llista de meyores páxines usando datos de Google Analytics",
+	"apihelp-googlepagestatsupdate-param-key": "Valor de [[mw:Manual:$wgSecretKey|$wgSecretKey]]"
+}

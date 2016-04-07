@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo"
+		]
+	},
+	"googleanalyticstoppages-desc": "Provee unha lista de páxinas empregando datos de Google Analytics",
+	"apihelp-googlepagestatsupdate-param-key": "Valor de [[mw:Manual:$wgSecretKey|$wgSecretKey]]"
+}
