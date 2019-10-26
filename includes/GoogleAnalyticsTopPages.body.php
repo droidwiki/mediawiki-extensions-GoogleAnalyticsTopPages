@@ -109,7 +109,7 @@
 		 * @return string
 		 */
 		public static function renderParserTag( $input, array $args, Parser $parser, PPFrame $frame ) {
-			$dbw = wfGetDB( DB_SLAVE );
+			$dbw = wfGetDB( DB_REPLICA );
 			$result = '';
 
 			// get the actual list of top pages
